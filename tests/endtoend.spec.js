@@ -48,12 +48,12 @@ await page.locator("[type='button']").last().click();
 
 await page.locator("[placeholder*='Country']").pressSequentially("ind");
 
-const dropdown = page.locator(".ta-results");
-await dropdown.waitFor();
+const dropdowns = page.locator(".ta-results");
+await dropdowns.waitFor();
 const optionsCount = await dropdown.locator("button").count();
 for(let i=0;i<count;i++)
 {
-  dropdown.locator("button").nth(i) 
+  dropdowns.locator("button").nth(i) 
 }
 
 });
